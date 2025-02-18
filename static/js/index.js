@@ -1,6 +1,7 @@
-let btn = document.querySelector(".hitMe")
+let btn = document.querySelector(".button")
+let t = document.querySelector(".text")
         let url = "https://api.chucknorris.io/jokes/random"
-        let risorsa
+        let risorsa;
 
 
         btn.addEventListener("click", function (e) {
@@ -15,7 +16,7 @@ let btn = document.querySelector(".hitMe")
                 }
             ).then(
                 function (data) {
-                    console.log(data.value)
+                   t.innerHTML = data.value;
                 }
             ).catch(
                 function (err) {
